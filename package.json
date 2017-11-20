@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-simple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "koa": "^2.4.1",
+    "koa-jsonp": "^2.0.2",
+    "koa-router": "^7.3.0",
+    "koa-safe-jsonp": "^0.3.1"
+  }
+}
