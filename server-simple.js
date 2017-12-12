@@ -1,35 +1,40 @@
 const Koa = require('koa');
 const app = new Koa();
-const router = require('koa-router')();
+const fs = require('fs');
 
+//keygrip  cookies密匙
+const Keygrip = require('keygrip');
+app.keys = new Keygrip(['im a newer secret', 'i like turtle'], 'sha256');
+
+//配置jsonp
 const jsonp = require('koa-safe-jsonp');
 jsonp(app, {
-	callback: 'callback',
-	limit: 50
+	callback: 'callback', //设置默认callback参数
 });
 
-router
-	.get('/login', (ctx) => {
-		const username = ctx.request.query['username'];
-		const password = ctx.request.query['password'];
+//common errorObj
+const {errorObj} = require('./util/msg');
 
-		var json = {
-			errorCode : -1,
-			errorMsg : 'fail'
-		};
+//遍历controller里面的所有路由
+const router = require('koa-router')();
+const controllerList = fs.readdirSync('./controller');
 
-		if(username == 'yyf' && password == '123456'){
-			json = {
-				errorCode : 0,
-				errorMsg : 'success'
-			};
-		}
-		console.log(11111111);
-		ctx.jsonp = json;
-	});
+for (var i = 0; i < controllerList.length; i++) {
+	const thisControllerName = controllerList[i].split('.js')[0];
+	const thispath = './controller/'+thisControllerName;
+	const mapping = require(thispath);
+	for (var j in mapping) {
+		const url = '/'+thisControllerName+j; //将当前的controller的name设置为url前一级
+		const func = mapping[j];
+		router.get(url, func);
+	}
+}
 
 app
 	.use(router.routes())
-	.use(router.allowedMethods());
+	.use(router.allowedMethods())
+	.use(async (ctx, next) => {
+		ctx.jsonp = errorObj;
+	});
 
 app.listen(3000);

@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "keygrip": "^1.0.2",
     "koa": "^2.4.1",
     "koa-jsonp": "^2.0.2",
     "koa-router": "^7.3.0",
