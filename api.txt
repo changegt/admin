@@ -1,0 +1,68 @@
+币安api
+https://www.binance.com/restapipub.html#user-content-endpoint-security-type
+
+币安获取当前k线数据
+https://api.binance.com/api/v1/klines?symbol=ETHBTC&interval=1m&limit=1
+
+[
+		  [
+		    1499040000000,      // Open time
+		    "0.01634790",       // Open
+		    "0.80000000",       // High
+		    "0.01575800",       // Low
+		    "0.01577100",       // Close
+		    "148976.11427815",  // Volume
+		    1499644799999,      // Close time
+		    "2434.19055334",    // Quote asset volume
+		    308,                // Number of trades
+		    "1756.87402397",    // Taker buy base asset volume
+		    "28.46694368",      // Taker buy quote asset volume
+		    "17928899.62484339" // Can be ignored
+		  ]
+		]
+
+
+---------------------------------------------------------------------------------
+
+
+中比api地址
+https://www.zb.com/i/developer
+
+中币获取k线数据
+http://api.zb.com/data/v1/kline?market=eth_btc&type=1min&size=1
+
+data : K线内容
+moneyType : 买入货币
+symbol : 卖出货币
+data : 内容说明
+[
+1417536000000, 时间戳
+2370.16, 开
+2380, 高
+2352, 低
+2367.37, 收
+17259.83 交易量
+] 
+
+---------------------------------------------------------------------------------
+
+火币api
+https://github.com/huobiapi/API_Docs/wiki/REST_api_reference
+
+火币获取k线数据
+https://api.huobi.pro/market/history/kline?symbol=ethbtc&period=1min&size=1
+
+  "data": [
+{
+    "id": K线id,
+    "amount": 成交量,
+    "count": 成交笔数,
+    "open": 开盘价,
+    "close": 收盘价,当K线为最晚的一根时，是最新成交价
+    "low": 最低价,
+    "high": 最高价,
+    "vol": 成交额, 即 sum(每一笔成交价 * 该笔的成交量)
+  }
+]
+
+---------------------------------------------------------------------------------
