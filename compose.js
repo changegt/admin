@@ -28,10 +28,6 @@ function compose(...args){
 			return Promise.resolve(fn(function(){ //生成一个proimise对象
 				return dispatch(i+1);
 			}));
-			
-			// return fn(function(){
-			// 	return dispatch(i+1);
-			// });
 		}
 	}
 	return dispatch(0);
@@ -75,9 +71,14 @@ var a = function(next){
 }
 
 var b = function(next){
+	console.log(3);
+	next();
+}
+
+function c (next) {
 	console.log(2);
 	next();
 }
 
-var c = [a,b];
-var d = compose(c);
+var d = [a,b,c];
+var e = compose(d);
