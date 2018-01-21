@@ -10,12 +10,15 @@
   "license": "MIT",
   "devDependencies": {
     "@alicloud/sms-sdk": "^1.0.3",
+    "chalk": "^2.3.0",
     "keygrip": "^1.0.2",
     "koa": "^2.4.1",
     "koa-jsonp": "^2.0.2",
     "koa-route": "^3.2.0",
     "koa-router": "^7.3.0",
-    "koa-safe-jsonp": "^0.3.1"
+    "koa-safe-jsonp": "^0.3.1",
+    "log4js": "^2.5.2",
+    "winston": "^2.4.0"
   },
   "dependencies": {
     "jsonp": "^0.2.1",

@@ -34,7 +34,7 @@ const send = (msg, type) => {
 
     smsClient.sendSMS({
         PhoneNumbers: '18757188917',
-        SignName: '陈东',
+        SignName: '姚永芳',
         TemplateCode: 'SMS_122286906',
         TemplateParam: JSON.stringify(msg)
     }).then(function (res) {
