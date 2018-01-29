@@ -14,10 +14,11 @@ function subscribe(ws, market) {
     }));
 }
 
+// var smsFlag = true;
+
 var init = (marketArr) => {
     var ws = new WebSocket(WS_URL);
-    var smsFlag = true;
-    var smsTo = '';
+    var name,open,close,percent;
 
     let i = 0;
     let maxLength = marketArr.length;
@@ -28,7 +29,7 @@ var init = (marketArr) => {
                 setTimeout(() => {
                     subscribe(ws, arr[i]);
                     i++;               
-                }, 40000);
+                }, 50000);
             }else{
                 subscribe(ws, arr[i]);
                 i++;
@@ -53,22 +54,23 @@ var init = (marketArr) => {
                 pong: msg.ping
             }));
         } else if (msg.data) {
-            var open = msg.data[msg.data.length-1].open;
-            var close = msg.data[msg.data.length-1].close;
-            var percent = parseFloat((close - open) / open * 100).toFixed(2);
+            name = '火币'+msg.id;
+            open = msg.data[msg.data.length-1].open;
+            close = msg.data[msg.data.length-1].close;
+            percent = parseFloat((close - open) / open * 100).toFixed(2);
             //发送消息, 测试只允许发送一次
-            if(Math.abs(percent) >= 1){
-                var txt = '【'+msg.id+'】比例：'+percent+'%-----开始价格：'+open+'，当前价格:'+close;
+            if(Math.abs(percent) >= 6.5){
+                var txt = '【'+name+'】比例：'+percent+'%-----开始价格：'+open+'，当前价格:'+close;
                 console.log(txt);
-                if(smsFlag){ 
-                    send({
-                        name: msg.id,
-                        percent: percent,
-                        startprice: open,
-                        nowprice: close
-                    });
-                    smsFlag = false;
-                }
+                // if(smsFlag){ 
+                    // send({
+                    //     name: name,
+                    //     percent: percent,
+                    //     startprice: open,
+                    //     nowprice: close
+                    // });
+                    // smsFlag = false;
+                // }
             }
             run.next(marketArr);
         }

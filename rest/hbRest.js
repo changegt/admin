@@ -1,0 +1,1 @@
+//https://api.huobi.pro/v1/common/symbols  //所有币币交易的类型

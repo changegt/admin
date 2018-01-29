@@ -23,8 +23,10 @@ const secretAccessKey = 'V9WF1jC695umL5UPJJBrsiTDzXiV52';
     }
  */
 
-const templateArr = ['SMS_122294925','SMS_123665052','SMS_122294923','SMS_123665049','SMS_122294922','SMS_123670044','SMS_123670043','SMS_122293300','SMS_122297834','SMS_122292801','SMS_122287804','SMS_122286906'];
-const phoneNum = '18586813408,17816873197,18757188917';
+const templateArr = ['SMS_122294925','SMS_123665052','SMS_122294923','SMS_123665049','SMS_122294922','SMS_123670044','SMS_123670043','SMS_122293300','SMS_122297834','SMS_122292801','SMS_122287804'];
+const adminMsgTpl = 'SMS_122286906'; //通知管理员的消息
+const phoneNum = '18757188917';
+// const phoneNum = '18586813408,17816873197,18757188917';
 const smsClient = new SMSClient({accessKeyId, secretAccessKey});
 
 //发送短信
@@ -57,7 +59,7 @@ const send = (msg, type) => {
             console.log(res)
         }
     }, function (err) {
-        console.log(err)
+        console.log(err);
     });
 };
 

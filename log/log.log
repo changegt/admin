@@ -80,3 +80,9 @@
   address: '170.33.1.12',
   port: 443 }
 [2018-01-25T22:16:05.943] [ERROR] log_date - 1006
+[2018-01-29T22:32:38.050] [ERROR] log_date - 1006
+[2018-01-29T23:09:07.452] [ERROR] log_date - 1006
+[2018-01-29T23:37:00.240] [ERROR] log_date - close=1006
+[2018-01-29T23:42:50.420] [ERROR] log_date - close=1006
+[2018-01-29T23:48:49.269] [ERROR] log_date - close=1006
+[2018-01-29T23:54:04.656] [ERROR] log_date - close=1006
