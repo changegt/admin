@@ -28,7 +28,7 @@ var init = (marketArr) => {
                 setTimeout(() => {
                     subscribe(ws, arr[i]);
                     i++;               
-                }, 20000);
+                }, 40000);
             }else{
                 subscribe(ws, arr[i]);
                 i++;
@@ -49,7 +49,6 @@ var init = (marketArr) => {
         });
         let msg = JSON.parse(text);
         if (msg.ping) {
-            console.log(msg.ping);
             ws.send(JSON.stringify({
                 pong: msg.ping
             }));
@@ -57,11 +56,11 @@ var init = (marketArr) => {
             var open = msg.data[msg.data.length-1].open;
             var close = msg.data[msg.data.length-1].close;
             var percent = parseFloat((close - open) / open * 100).toFixed(2);
-            if(Math.abs(percent) > 10){
+            //发送消息, 测试只允许发送一次
+            if(Math.abs(percent) >= 1){
                 var txt = '【'+msg.id+'】比例：'+percent+'%-----开始价格：'+open+'，当前价格:'+close;
-                //发送消息, 测试只允许发送一次
                 console.log(txt);
-                if(smsFlag){
+                if(smsFlag){ 
                     send({
                         name: msg.id,
                         percent: percent,
@@ -75,12 +74,12 @@ var init = (marketArr) => {
         }
     });
     ws.on('close', (data) => {
-        console.log('close', data);
+        console.log(data);
         logger.error(data);
         init(marketArr);
     });
     ws.on('error', err => {
-        console.log('error', err);
+        console.log(err);
         logger.error(err);
         init(marketArr);
     });

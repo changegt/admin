@@ -17,7 +17,6 @@ var hbStr = {
     eth3: 'rdneth,qspeth,btmeth,mcoeth,tnteth,tnbeth,manaeth,payeth,qasheth,gnteth,dgdeth'.split(','),    //52
 }
 
-let num = 0;
 const hbTask = require('./sockets/hbsocket');
 
 hbTask(hbStr.usdt);
