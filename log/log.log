@@ -1,0 +1,82 @@
+[2018-01-21T18:40:43.761] [ERROR] log_date - 1005
+[2018-01-21T21:33:20.258] [ERROR] log_date - 1005
+[2018-01-25T22:16:05.906] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.914] [ERROR] log_date - 1006
+[2018-01-25T22:16:05.919] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.920] [ERROR] log_date - 1006
+[2018-01-25T22:16:05.922] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.923] [ERROR] log_date - 1006
+[2018-01-25T22:16:05.928] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.929] [ERROR] log_date - 1006
+[2018-01-25T22:16:05.932] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.933] [ERROR] log_date - 1006
+[2018-01-25T22:16:05.936] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.937] [ERROR] log_date - 1006
+[2018-01-25T22:16:05.939] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.940] [ERROR] log_date - 1006
+[2018-01-25T22:16:05.942] [ERROR] log_date - { Error: connect ETIMEDOUT 170.33.1.12:443
+    at Object._errnoException (util.js:1024:11)
+    at _exceptionWithHostPort (util.js:1046:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
+  code: 'ETIMEDOUT',
+  errno: 'ETIMEDOUT',
+  syscall: 'connect',
+  address: '170.33.1.12',
+  port: 443 }
+[2018-01-25T22:16:05.943] [ERROR] log_date - 1006
