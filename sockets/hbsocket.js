@@ -54,7 +54,7 @@ var init = (marketArr) => {
                 pong: msg.ping
             }));
         } else if (msg.data) {
-            name = '火币'+msg.id;
+            name = 'hb---'+msg.id;
             open = msg.data[msg.data.length-1].open;
             close = msg.data[msg.data.length-1].close;
             percent = parseFloat((close - open) / open * 100).toFixed(2);
@@ -76,13 +76,13 @@ var init = (marketArr) => {
         }
     });
     ws.on('close', (data) => {
-        console.log(data);
-        logger.error(data);
+        console.log('hbclose='+data);
+        logger.error('hbclose='+data);
         init(marketArr);
     });
     ws.on('error', err => {
-        console.log(err);
-        logger.error(err);
+        console.log('hberror='+err);
+        logger.error('hberror='+err);
         init(marketArr);
     });
 };
